@@ -3,7 +3,7 @@
   <name>sr_hand_config</name>
   <version>0.0.0</version>
   <description>The sr_hand_config package</description>
-  <maintainer email="software@shadowrobot.com">user</maintainer>
+  <maintainer email="software@shadowrobot.com">Shadow Robot Software Team</maintainer>
   <license>GPLv2</license>
   <buildtool_depend>catkin</buildtool_depend>
 
