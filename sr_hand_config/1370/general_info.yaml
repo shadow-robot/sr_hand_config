@@ -1,0 +1,10 @@
+side: 'right'
+type: 'hand_e'
+name: 'demohand_C'
+biotac: false
+robot_description:
+  package_name: sr_description
+  relative_path: robots/shadowhand_motor.urdf.xacro
+mapping_path:
+  package_name: sr_edc_launch
+  relative_path: mappings/default_mappings/rh_E_v3.yaml
