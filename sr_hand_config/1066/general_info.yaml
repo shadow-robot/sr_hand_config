@@ -1,0 +1,10 @@
+side: 'right'
+type: 'hand_g'
+name: 'demohand_lite_v1'
+biotac: false
+robot_description:
+  package_name: sr_description
+  relative_path: robots/shadowhand_lite.urdf.xacro
+mapping_path:
+  package_name: sr_edc_launch
+  relative_path: mappings/default_mappings/rh_lite_v1.yaml
