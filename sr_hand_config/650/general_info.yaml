@@ -1,0 +1,7 @@
+side: 'right'
+type: 'hand_e'
+name: 'shadowrobot_140515_noetic'
+biotac: false
+mapping_path:
+  package_name: sr_edc_launch
+  relative_path: mappings/default_mappings/rh_E_v1.yaml
