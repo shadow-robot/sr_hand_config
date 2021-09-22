@@ -4,4 +4,4 @@ name: 'demohand_D'
 biotac: false
 mapping_path:
   package_name: sr_edc_launch
-  relative_path: mappings/default_mappings/rh_E_v3.yaml
+  relative_path: mappings/default_mappings/lh_E_v3.yaml
