@@ -1,7 +1,9 @@
 <launch>
   <arg name="hand_serials_list"/>
+  <arg name="control_mode" default="pwm"/>
 
   <node name="load_hand_controls" pkg="sr_hand_config" type="load_hand_controls.py" output="screen">
     <rosparam param="hand_serials_list" subst_value="True">$(arg hand_serials_list)</rosparam>
+    <param name="control_mode" value="$(arg control_mode)" />
   </node>
 </launch>

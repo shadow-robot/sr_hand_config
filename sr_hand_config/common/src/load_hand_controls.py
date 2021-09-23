@@ -21,25 +21,41 @@ from os import walk
 import yaml
 
 class LoadHandControls(object):
-    def __init__(self, hand_serials_list):
+    def __init__(self, hand_serials_list, control_mode):
         self._hand_serials_list = hand_serials_list
+        self._control_mode = control_mode
         self._load_control_params()
 
     def _load_control_params(self):
         for hand_serial in self._hand_serials_list:
-            files_path = rospkg.RosPack().get_path('sr_hand_config') + '/' + str(hand_serial) + '/controls'
-            control_files = self._get_all_files_in_dir(files_path)
+            # Load files from common folder no matter what the control mode is
+            common_files_path = rospkg.RosPack().get_path('sr_hand_config') + \
+                '/' + str(hand_serial) + '/controls/common'
 
-            for control_file in control_files:
-                with open(files_path + '/' + control_file) as f:
-                    config = yaml.safe_load(f)
-                for param in config:
-                    rospy.set_param(param, config[param])
+            control_mode_files_path = rospkg.RosPack().get_path('sr_hand_config') + \
+                '/' + str(hand_serial) + '/controls/' + self._control_mode
+        
+            common_control_files = [common_files_path + '/' + control_file
+                for control_file in self._get_all_files_in_dir(common_files_path)]
+            mode_control_files = [control_mode_files_path + '/' + control_file
+                for control_file in self._get_all_files_in_dir(control_mode_files_path)]
+
+            for control_file_path in common_control_files + mode_control_files:
+                self._load_params_from_file(control_file_path)
 
     def _get_all_files_in_dir(self, path):
         return next(walk(path), (None, None, []))[2]
 
+    def _load_params_from_file(self, file_path):
+        with open(file_path) as f:
+            config = yaml.safe_load(f)
+        for param in config:
+            rospy.set_param(param, config[param])
+
 if __name__ == "__main__":
     rospy.init_node('load_hand_controls', anonymous=True)
-    hand_serials_list = rospy.get_param("~hand_serials_list")
-    LoadHandControls(hand_serials_list)
+
+    hand_serials_list = rospy.get_param('~hand_serials_list')
+    control_mode = rospy.get_param('~control_mode', 'pwm')
+
+    LoadHandControls(hand_serials_list, control_mode)
