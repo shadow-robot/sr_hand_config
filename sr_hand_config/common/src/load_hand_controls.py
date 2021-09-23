@@ -30,10 +30,10 @@ class LoadHandControls(object):
         for hand_serial in self._hand_serials_list:
             # Load files from common folder no matter what the control mode is
             common_files_path = rospkg.RosPack().get_path('sr_hand_config') + \
-                '/' + str(hand_serial) + '/controls/common'
+                '/' + str(hand_serial) + '/controls/host/common'
 
             control_mode_files_path = rospkg.RosPack().get_path('sr_hand_config') + \
-                '/' + str(hand_serial) + '/controls/' + self._control_mode
+                '/' + str(hand_serial) + '/controls/host/' + self._control_mode
         
             common_control_files = [common_files_path + '/' + control_file
                 for control_file in self._get_all_files_in_dir(common_files_path)]
