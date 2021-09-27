@@ -49,24 +49,28 @@ class LoadDiagnosticAnalyzer(object):
 
     def _get_per_hand_analyzer(self):
         for hand_serial in self._hand_serials_list:
-            if self._hand_types[hand_serial] == 'hand_g':
-                analyzer_file_suffix = '_lite'
-            elif self._hand_types[hand_serial] == 'hand_extra_lite':
-                analyzer_file_suffix = '_extra_lite'
-            else:
-                analyzer_file_suffix = ''
-            
-            analyzer_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
-                '/common/config/diagnostic_analyzer' + analyzer_file_suffix + '.yaml'
+            analyzer_file_path = self._get_analyzer_file(hand_serial)
 
             with open(analyzer_file_path) as f:
               analyzer = yaml.safe_load(f)
-
+            
+            # Modify path so it shows which hand side in diagnostics
             analyzer['analyzers']['shadow_hand']['path'] = self._hand_sides[hand_serial].capitalize() + ' ' + \
                 analyzer['analyzers']['shadow_hand']['path']
 
             self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
                 analyzer['analyzers']['shadow_hand']
+
+    def _get_analyzer_file(self, hand_serial):
+        if self._hand_types[hand_serial] == 'hand_g':
+            analyzer_file_suffix = '_lite'
+        elif self._hand_types[hand_serial] == 'hand_extra_lite':
+            analyzer_file_suffix = '_extra_lite'
+        else:
+            analyzer_file_suffix = ''
+            
+        return rospkg.RosPack().get_path('sr_hand_config') + \
+            '/common/config/diagnostic_analyzer' + analyzer_file_suffix + '.yaml'
 
     def _get_common_analyzers(self):
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
