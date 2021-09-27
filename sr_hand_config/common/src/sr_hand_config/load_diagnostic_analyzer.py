@@ -30,8 +30,24 @@ class LoadDiagnosticAnalyzer(object):
         self._get_hand_info()
         self._load_analyzer_params()
 
+    def _get_hand_info(self):
+        for hand_serial in self._hand_serials_list:
+            general_info_file = rospkg.RosPack().get_path('sr_hand_config') + \
+                '/' + str(hand_serial) + '/general_info.yaml'
+
+            with open(general_info_file) as f:
+              general_info = yaml.safe_load(f)
+
+            self._hand_types[hand_serial] = general_info['type']
+            self._hand_sides[hand_serial] = general_info['side']
 
     def _load_analyzer_params(self):
+        self._get_per_hand_analyzer()
+        self._get_common_analyzers()
+
+        rospy.set_param('analyzers', self._diagnostic_analyzers)
+
+    def _get_per_hand_analyzer(self):
         for hand_serial in self._hand_serials_list:
             if self._hand_types[hand_serial] == 'hand_g':
                 analyzer_file_suffix = '_lite'
@@ -49,6 +65,7 @@ class LoadDiagnosticAnalyzer(object):
             self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
                 analyzer['analyzers']['shadow_hand']
 
+    def _get_common_analyzers(self):
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
                 '/common/config/common_diagnostic_analyzers.yaml'
 
@@ -57,20 +74,6 @@ class LoadDiagnosticAnalyzer(object):
 
         for analyzer, params in common_analyzers['analyzers'].items():
             self._diagnostic_analyzers[analyzer] = params
-
-        rospy.set_param('analyzers', self._diagnostic_analyzers)
-
-
-    def _get_hand_info(self):
-        for hand_serial in self._hand_serials_list:
-            general_info_file = rospkg.RosPack().get_path('sr_hand_config') + \
-                '/' + str(hand_serial) + '/general_info.yaml'
-
-            with open(general_info_file) as f:
-              general_info = yaml.safe_load(f)
-
-            self._hand_types[hand_serial] = general_info['type']
-            self._hand_sides[hand_serial] = general_info['side']
 
 if __name__ == "__main__":
     rospy.init_node('load_diagnostic_analyzer', anonymous=True)
