@@ -62,6 +62,9 @@ class LoadDiagnosticAnalyzer(object):
             with open(analyzer_file_path) as f:
               analyzer = yaml.safe_load(f)
 
+            analyzer['analyzers']['shadow_hand']['path'] = self._hand_sides[hand_serial].capitalize() + ' ' + \
+                analyzer['analyzers']['shadow_hand']['path']
+
             self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
                 analyzer['analyzers']['shadow_hand']
 
