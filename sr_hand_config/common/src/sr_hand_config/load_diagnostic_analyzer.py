@@ -24,9 +24,10 @@ class LoadDiagnosticAnalyzer(object):
     def __init__(self, hand_serials_list):
         self._hand_serials_list = hand_serials_list
         self._hand_types = {}
+        self._hand_sides = {}
         self._diagnostic_analyzers = {}
 
-        self._get_hand_type()
+        self._get_hand_info()
         self._load_analyzer_params()
 
 
@@ -45,7 +46,7 @@ class LoadDiagnosticAnalyzer(object):
             with open(analyzer_file_path) as f:
               analyzer = yaml.safe_load(f)
 
-            self._diagnostic_analyzers[self._hand_types[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
+            self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
                 analyzer['analyzers']['shadow_hand']
 
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
@@ -60,7 +61,7 @@ class LoadDiagnosticAnalyzer(object):
         rospy.set_param('analyzers', self._diagnostic_analyzers)
 
 
-    def _get_hand_type(self):
+    def _get_hand_info(self):
         for hand_serial in self._hand_serials_list:
             general_info_file = rospkg.RosPack().get_path('sr_hand_config') + \
                 '/' + str(hand_serial) + '/general_info.yaml'
@@ -69,6 +70,7 @@ class LoadDiagnosticAnalyzer(object):
               general_info = yaml.safe_load(f)
 
             self._hand_types[hand_serial] = general_info['type']
+            self._hand_sides[hand_serial] = general_info['side']
 
 if __name__ == "__main__":
     rospy.init_node('load_diagnostic_analyzer', anonymous=True)
