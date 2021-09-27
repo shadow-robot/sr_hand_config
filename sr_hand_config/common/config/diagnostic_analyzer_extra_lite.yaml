@@ -43,25 +43,3 @@ analyzers:
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*THJ[0-9].*'
         num_items: 4
-  ethercat:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: EtherCat
-    analyzers:
-      EtherCAT_slaves:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: EtherCAT Slaves
-        timeout: 5.0
-        regex: ['SRBridge.*', '([^\s]+) EtherCAT Dual CAN Palm']
-        num_items: 2
-      EtherCAT_master:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: EtherCAT Master
-        timeout: 5.0
-        regex: 'EtherCAT Master'
-        num_items: 1
-  control_loop:
-    type: diagnostic_aggregator/GenericAnalyzer
-    path: Realtime Control Loop
-    timeout: 5.0
-    startswith: 'Realtime Control Loop'
-    num_items: 1
