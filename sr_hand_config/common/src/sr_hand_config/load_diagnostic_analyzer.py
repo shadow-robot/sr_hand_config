@@ -54,12 +54,31 @@ class LoadDiagnosticAnalyzer(object):
             with open(analyzer_file_path) as f:
               analyzer = yaml.safe_load(f)
             
-            # Modify path so it shows which hand side in diagnostics
-            analyzer['analyzers']['shadow_hand']['path'] = self._hand_sides[hand_serial].capitalize() + ' ' + \
-                analyzer['analyzers']['shadow_hand']['path']
+            self._modify_analyzers_for_correct_index(analyzer, hand_serial)
 
             self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
                 analyzer['analyzers']['shadow_hand']
+
+    def _modify_analyzers_for_correct_index(self, analyzer, hand_serial):
+        analyzer['analyzers']['shadow_hand']['path'] = self._hand_sides[hand_serial].capitalize() + ' ' + \
+            analyzer['analyzers']['shadow_hand']['path']
+
+        for individual_analyzer, individual_analyzer_vals in analyzer['analyzers']['shadow_hand']['analyzers'].items():
+            if isinstance(individual_analyzer_vals['regex'], list):
+                new_regex = []
+                for element in individual_analyzer_vals['regex']:
+                    new_regex.append(element.replace("([^\s]+)", self._side_to_prefix(self._hand_sides[hand_serial])))
+            else:
+                new_regex = individual_analyzer_vals['regex'].replace("([^\s]+)", self._side_to_prefix(self._hand_sides[hand_serial]))
+            analyzer['analyzers']['shadow_hand']['analyzers'][individual_analyzer]['regex'] = new_regex
+
+    def _side_to_prefix(self, side):
+        if side == 'right':
+            return 'rh'
+        elif side == 'left':
+          return 'lh'
+
+        raise ValueError("Wrong side provided")
 
     def _get_analyzer_file(self, hand_serial):
         if self._hand_types[hand_serial] == 'hand_g':

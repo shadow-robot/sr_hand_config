@@ -3,12 +3,6 @@ analyzers:
     type: diagnostic_aggregator/AnalyzerGroup
     path: EtherCat
     analyzers:
-      EtherCAT_slaves:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: EtherCAT Slaves
-        timeout: 5.0
-        regex: ['SRBridge.*', '([^\s]+) EtherCAT Dual CAN Palm']
-        num_items: 2
       EtherCAT_master:
         type: diagnostic_aggregator/GenericAnalyzer
         path: EtherCAT Master

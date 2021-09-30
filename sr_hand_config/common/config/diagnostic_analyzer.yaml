@@ -49,3 +49,9 @@ analyzers:
         timeout: 5.0
         regex: '([^\s]+) SRDMotor .*WRJ[0-9].*'
         num_items: 2
+      EtherCAT_slaves:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: EtherCAT Slaves
+        timeout: 5.0
+        regex: ['SRBridge.*', '([^\s]+) EtherCAT Dual CAN Palm']
+        num_items: 2
