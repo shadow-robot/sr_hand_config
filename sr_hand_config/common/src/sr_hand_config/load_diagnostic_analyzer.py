@@ -17,8 +17,8 @@
 from __future__ import absolute_import
 import rospy
 import rospkg
-from os import walk
 import yaml
+
 
 class LoadDiagnosticAnalyzer(object):
     def __init__(self, hand_serials_list):
@@ -36,7 +36,7 @@ class LoadDiagnosticAnalyzer(object):
                 '/' + str(hand_serial) + '/general_info.yaml'
 
             with open(general_info_file) as f:
-              general_info = yaml.safe_load(f)
+                general_info = yaml.safe_load(f)
 
             self._hand_types[hand_serial] = general_info['type']
             self._hand_sides[hand_serial] = general_info['side']
@@ -52,8 +52,8 @@ class LoadDiagnosticAnalyzer(object):
             analyzer_file_path = self._get_analyzer_file(hand_serial)
 
             with open(analyzer_file_path) as f:
-              analyzer = yaml.safe_load(f)
-            
+                analyzer = yaml.safe_load(f)
+
             self._modify_analyzers_for_correct_index(analyzer, hand_serial)
 
             self._diagnostic_analyzers[self._hand_sides[hand_serial] + '_shadow_hand_' + str(hand_serial)] = \
@@ -69,14 +69,17 @@ class LoadDiagnosticAnalyzer(object):
                 for element in individual_analyzer_vals['regex']:
                     new_regex.append(element.replace("([^\s]+)", self._side_to_prefix(self._hand_sides[hand_serial])))
             else:
-                new_regex = individual_analyzer_vals['regex'].replace("([^\s]+)", self._side_to_prefix(self._hand_sides[hand_serial]))
+                new_regex = \
+                    individual_analyzer_vals['regex'].replace("([^\s]+)",
+                                                              self._side_to_prefix(self._hand_sides[hand_serial]))
+
             analyzer['analyzers']['shadow_hand']['analyzers'][individual_analyzer]['regex'] = new_regex
 
     def _side_to_prefix(self, side):
         if side == 'right':
             return 'rh'
         elif side == 'left':
-          return 'lh'
+            return 'lh'
 
         raise ValueError("Wrong side provided")
 
@@ -87,19 +90,20 @@ class LoadDiagnosticAnalyzer(object):
             analyzer_file_suffix = '_extra_lite'
         else:
             analyzer_file_suffix = ''
-            
+
         return rospkg.RosPack().get_path('sr_hand_config') + \
             '/common/config/diagnostic_analyzer' + analyzer_file_suffix + '.yaml'
 
     def _get_common_analyzers(self):
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
-                '/common/config/common_diagnostic_analyzers.yaml'
+            '/common/config/common_diagnostic_analyzers.yaml'
 
         with open(common_analyzers_file_path) as f:
-              common_analyzers = yaml.safe_load(f)
+            common_analyzers = yaml.safe_load(f)
 
         for analyzer, params in common_analyzers['analyzers'].items():
             self._diagnostic_analyzers[analyzer] = params
+
 
 if __name__ == "__main__":
     rospy.init_node('load_diagnostic_analyzer', anonymous=True)
