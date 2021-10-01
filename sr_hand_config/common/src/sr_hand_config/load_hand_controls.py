@@ -20,6 +20,7 @@ import rospkg
 from os import walk
 import yaml
 
+
 class LoadHandControls(object):
     def __init__(self, hand_serials_list, control_mode):
         self._hand_serials_list = hand_serials_list
@@ -34,7 +35,7 @@ class LoadHandControls(object):
 
             control_mode_files_path = rospkg.RosPack().get_path('sr_hand_config') + \
                 '/' + str(hand_serial) + '/controls/host/' + self._control_mode
-        
+
             common_control_files = [common_files_path + '/' + control_file
                 for control_file in self._get_all_files_in_dir(common_files_path)]
             mode_control_files = [control_mode_files_path + '/' + control_file
@@ -51,6 +52,7 @@ class LoadHandControls(object):
             config = yaml.safe_load(f)
         for param in config:
             rospy.set_param(param, config[param])
+
 
 if __name__ == "__main__":
     rospy.init_node('load_hand_controls', anonymous=True)
