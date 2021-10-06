@@ -1,7 +1,7 @@
 # Shadow Hand Defines .. Need Fixing as PID values are not correct
 
 sh_lh_ffj0_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_FFJ0
   pid:
     p: 0
@@ -12,7 +12,7 @@ sh_lh_ffj0_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_ffj3_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_FFJ3
   pid:
     p: 0
@@ -23,7 +23,7 @@ sh_lh_ffj3_velocity_controller:
     velocity_deadband: 0.0
     friction_deadband: 5
 sh_lh_ffj4_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_FFJ4
   pid:
     p: 0
@@ -36,7 +36,7 @@ sh_lh_ffj4_velocity_controller:
 
 
 sh_lh_mfj0_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_MFJ0
   pid:
     p: 0
@@ -47,7 +47,7 @@ sh_lh_mfj0_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_mfj3_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_MFJ3
   pid:
     p: 0
@@ -58,7 +58,7 @@ sh_lh_mfj3_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_mfj4_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_MFJ4
   pid:
     p: 0.0
@@ -72,7 +72,7 @@ sh_lh_mfj4_velocity_controller:
 
 
 sh_lh_rfj0_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_RFJ0
   pid:
     p: 0
@@ -83,7 +83,7 @@ sh_lh_rfj0_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_rfj3_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_RFJ3
   pid:
     p: 0
@@ -94,7 +94,7 @@ sh_lh_rfj3_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_rfj4_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_RFJ4
   pid:
     p: 0
@@ -108,7 +108,7 @@ sh_lh_rfj4_velocity_controller:
 
 
 sh_lh_lfj0_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_LFJ0
   pid:
     p: 0
@@ -119,7 +119,7 @@ sh_lh_lfj0_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_lfj3_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_LFJ3
   pid:
     p: 0
@@ -130,7 +130,7 @@ sh_lh_lfj3_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_lfj4_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_LFJ4
   pid:
     p: 0
@@ -141,7 +141,7 @@ sh_lh_lfj4_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_lfj5_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_LFJ5
   pid:
     p: 0
@@ -155,7 +155,7 @@ sh_lh_lfj5_velocity_controller:
 
 
 sh_lh_thj1_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_THJ1
   pid:
     p: 0
@@ -166,7 +166,7 @@ sh_lh_thj1_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_thj2_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_THJ2
   pid:
     p: 0
@@ -177,7 +177,7 @@ sh_lh_thj2_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_thj3_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_THJ3
   pid:
     p: 0
@@ -188,7 +188,7 @@ sh_lh_thj3_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_thj4_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_THJ4
   pid:
     p: 0
@@ -199,7 +199,7 @@ sh_lh_thj4_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_thj5_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_THJ5
   pid:
     p: 0
@@ -213,7 +213,7 @@ sh_lh_thj5_velocity_controller:
 
 
 sh_lh_wrj1_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_WRJ1
   pid:
     p: 0
@@ -224,7 +224,7 @@ sh_lh_wrj1_velocity_controller:
     velocity_deadband: 0.015
     friction_deadband: 5
 sh_lh_wrj2_velocity_controller:
-  type: sr_mechanism_controllers/SlhJointVelocityController
+  type: sr_mechanism_controllers/SrhJointVelocityController
   joint: lh_WRJ2
   pid:
     p: 0
