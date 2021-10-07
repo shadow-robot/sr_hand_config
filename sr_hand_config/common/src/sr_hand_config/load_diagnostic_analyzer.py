@@ -67,10 +67,10 @@ class LoadDiagnosticAnalyzer(object):
             if isinstance(individual_analyzer_vals['regex'], list):
                 new_regex = []
                 for element in individual_analyzer_vals['regex']:
-                    new_regex.append(element.replace("([^\s]+)", self._side_to_prefix(self._hand_sides[hand_serial])))
+                    new_regex.append(element.replace("([^\\s]+)", self._side_to_prefix(self._hand_sides[hand_serial])))
             else:
                 new_regex = \
-                    individual_analyzer_vals['regex'].replace("([^\s]+)",
+                    individual_analyzer_vals['regex'].replace("([^\\s]+)",
                                                               self._side_to_prefix(self._hand_sides[hand_serial]))
 
             analyzer['analyzers']['shadow_hand']['analyzers'][individual_analyzer]['regex'] = new_regex

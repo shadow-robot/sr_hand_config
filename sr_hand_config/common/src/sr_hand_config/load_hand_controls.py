@@ -37,9 +37,9 @@ class LoadHandControls(object):
                 '/' + str(hand_serial) + '/controls/host/' + self._control_mode
 
             common_control_files = [common_files_path + '/' + control_file
-                for control_file in self._get_all_files_in_dir(common_files_path)]
+                                    for control_file in self._get_all_files_in_dir(common_files_path)]
             mode_control_files = [control_mode_files_path + '/' + control_file
-                for control_file in self._get_all_files_in_dir(control_mode_files_path)]
+                                  for control_file in self._get_all_files_in_dir(control_mode_files_path)]
 
             for control_file_path in common_control_files + mode_control_files:
                 self._load_params_from_file(control_file_path)
