@@ -1,7 +1,14 @@
 side: 'right'
 type: 'hand_g'
-name: 'demohand_lite_v1'
-biotac: false
+version: 'G1M5'
+fingers: [th, ff, mf, rf]
+sensors:
+  tip: {th: pst, ff: pst, mf: pst, rf: pst}
+  mid: {}
+  prox: {}
+  palm: {}
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/rh_lite_v1.yaml
+name: 'demohand_lite_v1'  # deprecated, to be removed
+biotac: false # deprecated, to be removed

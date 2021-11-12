@@ -5,3 +5,19 @@ biotac: false
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/lh_E_v4.yaml
+
+
+side: 'right'
+type: 'hand_e'
+version: 'E3M5'
+fingers: [th, ff, mf, rf, lf]
+sensors:
+  tip: {th: pst, ff: pst, mf: pst, rf: pst, lf: pst}
+  mid: {}
+  prox: {}
+  palm: {}
+mapping_path:
+  package_name: sr_edc_launch
+  relative_path: mappings/default_mappings/rh_E_v1.yaml
+name: 'shadowrobot_140515_noetic'  # deprecated, to be removed
+biotac: false # deprecated, to be removed

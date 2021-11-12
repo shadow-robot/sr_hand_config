@@ -1,7 +1,14 @@
 side: 'left'
 type: 'hand_e'
-name: 'shadowrobot_201008_noetic'
-biotac: true
+version: 'E3M5'
+fingers: [th, ff, mf, rf, lf]
+sensors:
+  tip: {th: pst, ff: pst, mf: pst, rf: pst, lf: pst}
+  mid: {}
+  prox: {}
+  palm: {}
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/lh_E_v4.yaml
+name: 'shadowrobot_201008_noetic'  # deprecated, to be removed
+biotac: false  # deprecated, to be removed

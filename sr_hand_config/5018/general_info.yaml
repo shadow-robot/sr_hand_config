@@ -1,7 +1,14 @@
 side: 'right'
 type: 'hand_e'
-name: 'shadowrobot_210823'
-biotac: false
+version: 'E3M5'
+fingers: [th, ff, mf, rf, lf]
+sensors:
+  tip: {th: bt_sp, ff: bt_sp, mf: bt_sp, rf: bt_sp, lf: bt_sp}
+  mid: {}
+  prox: {}
+  palm: {}
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/rh_E_v4.yaml
+name: 'shadowrobot_210823'  # deprecated, to be removed
+biotac: false  # deprecated, to be removed
