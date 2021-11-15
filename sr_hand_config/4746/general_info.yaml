@@ -1,6 +1,6 @@
 side: 'right'
 type: 'hand_e'
-name: 'shadowrobot_210420'
+name: 'shadowrobot_211101'
 biotac: false
 mapping_path:
   package_name: sr_edc_launch
