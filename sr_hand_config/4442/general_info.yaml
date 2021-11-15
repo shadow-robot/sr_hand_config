@@ -10,5 +10,4 @@ sensors:
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/lh_E_v4.yaml
-name: 'shadowrobot_200816'  # deprecated, to be removed
 biotac: true  # deprecated, to be removed
