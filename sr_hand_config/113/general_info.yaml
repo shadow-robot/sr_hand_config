@@ -1,7 +1,13 @@
 side: 'right'
 type: 'hand_e'
-name: 'phantomhand_003'
-biotac: false
+version: 'E3M5'
+fingers: False
+sensors:
+  tip: {}
+  mid: {}
+  prox: {}
+  palm: {}
 mapping_path:
   package_name: sr_edc_launch
   relative_path: mappings/default_mappings/rh_E_v4.yaml
+biotac: false # deprecated, to be removed
