@@ -9,5 +9,5 @@ sensors:
   palm: {}
 mapping_path:
   package_name: sr_edc_launch
-  relative_path: mappings/default_mappings/rh_E_v4.yaml
+  relative_path: mappings/default_mappings/rh_E_v5.yaml
 biotac: true  # deprecated, to be removed
