@@ -1,7 +1,7 @@
 sh_rh_ffj0_position_controller:
   joint: rh_FFJ0
   pid:
-    d: 500.0
+    d: 50.0
     deadband: 0
     friction_deadband: 2000.0
     i: 0.0
@@ -119,7 +119,7 @@ sh_rh_mfj4_position_controller:
 sh_rh_rfj0_position_controller:
   joint: rh_RFJ0
   pid:
-    d: -500.0
+    d: -50.0
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
