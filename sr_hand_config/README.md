@@ -1,6 +1,6 @@
 # sr_hand_config
 
-Package containing configurations necessary for running Shadow Hands
+Package containing configurations necessary for running Shadow Hands.
 
 ## general_info.yaml
 
