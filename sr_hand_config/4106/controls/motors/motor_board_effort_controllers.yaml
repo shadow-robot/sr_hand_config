@@ -282,7 +282,7 @@ thj2:
     torque_limit: 400
     torque_limiter_gain: 64
   pos_filter:
-    0.00000000000001
+    tau: 0.00000000000001
 thj3:
   backlash_compensation: true
   pid:
@@ -301,7 +301,7 @@ thj3:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.00000000000001
 thj4:
   backlash_compensation: false
   pid:
