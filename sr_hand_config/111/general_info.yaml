@@ -1,9 +1,9 @@
 side: 'right'
 type: 'hand_e'
 version: 'E3M5'
-fingers: False
+fingers: [th, ff, mf, rf, lf]
 sensors:
-  tip: {}
+  tip: {th: pst, ff: pst, mf: pst, rf: pst, lf: pst}
   mid: {}
   prox: {}
   palm: {}
