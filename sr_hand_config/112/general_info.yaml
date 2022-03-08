@@ -1,7 +1,7 @@
 side: 'left'
 type: 'hand_e'
 version: 'E3M5'
-fingers: False
+fingers: [th, ff, mf, rf, lf]
 sensors:
   tip: {}
   mid: {}
