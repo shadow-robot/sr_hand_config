@@ -1,0 +1,12 @@
+side: 'right'
+type: 'hand_e'
+version: 'E3M5'
+fingers: [th, ff, mf, rf, lf]
+sensors:
+  tip: {th: bt_sp, ff: bt_sp, mf: bt_sp, rf: bt_sp, lf: bt_sp}
+  mid: {}
+  prox: {}
+  palm: {}
+mapping_path:
+  package_name: sr_edc_launch
+  relative_path: mappings/default_mappings/rh_E_v4.yaml
