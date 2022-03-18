@@ -1,4 +1,4 @@
-side: 'right'
+side: 'left'
 type: 'hand_e'
 version: 'E3M5'
 fingers: [th, ff, mf, rf, lf]
@@ -9,4 +9,4 @@ sensors:
   palm: {}
 mapping_path:
   package_name: sr_edc_launch
-  relative_path: mappings/default_mappings/rh_E_v4.yaml
+  relative_path: mappings/default_mappings/lh_E_v5.yaml
