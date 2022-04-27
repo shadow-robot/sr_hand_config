@@ -161,7 +161,7 @@ sh_rh_thj1_position_controller:
     i_clamp: 3000
     max_force: 0.0
     p: 5000
-    position_deadband: 0.014999999999999999
+    position_deadband: 0.0000000001
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_thj2_position_controller:
   joint: rh_THJ2
