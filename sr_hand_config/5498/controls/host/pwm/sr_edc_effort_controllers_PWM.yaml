@@ -1,0 +1,59 @@
+# First Finger (Index finger)
+sh_rh_ffj0_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_FFJ0
+  max_force: 600
+  friction_deadband: 5
+sh_rh_ffj3_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_FFJ3
+  max_force: 600
+  friction_deadband: 5
+sh_rh_ffj4_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_FFJ4
+  max_force: 600
+  friction_deadband: 5
+
+
+# Ring Finger
+sh_rh_rfj0_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_RFJ0
+  max_force: 600
+  friction_deadband: 5
+sh_rh_rfj3_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_RFJ3
+  max_force: 600
+  friction_deadband: 5
+sh_rh_rfj4_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_RFJ4
+  max_force: 600
+  friction_deadband: 5
+
+
+# Thumb
+sh_rh_thj1_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_THJ1
+  max_force: 600
+  friction_deadband: 5
+sh_rh_thj2_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_THJ2
+  max_force: 600
+  friction_deadband: 5
+sh_rh_thj4_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_THJ4
+  max_force: 600
+  friction_deadband: 5
+sh_rh_thj5_effort_controller:
+  type: sr_mechanism_controllers/SrhEffortJointController
+  joint: rh_THJ5
+  max_force: 600
+  friction_deadband: 5
+
+
