@@ -32,7 +32,7 @@ ffj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 550
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
@@ -89,7 +89,7 @@ lfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 550
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
@@ -165,7 +165,7 @@ mfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 550
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
@@ -222,7 +222,7 @@ rfj3:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 450
+    torque_limit: 550
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
@@ -279,7 +279,7 @@ thj2:
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 400
+    torque_limit: 550
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
