@@ -264,6 +264,8 @@ thj1:
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.00000000000001
+  effort_filter:
+    tau: 0.00000000000001
 thj2:
   backlash_compensation: true
   pid:
