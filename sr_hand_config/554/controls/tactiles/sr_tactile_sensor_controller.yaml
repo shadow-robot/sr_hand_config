@@ -1,0 +1,4 @@
+sr_rh_tactile_sensor_controller:
+  type: sr_tactile_sensor_controller/SrTactileSensorController
+  publish_rate: 1100 # effectively this yields 1000Hz... -- niklas@20210101
+  prefix: rh
