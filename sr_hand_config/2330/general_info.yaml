@@ -1,4 +1,4 @@
-side: 'left'
+side: 'right'
 type: 'hand_e'
 version: 'E3M5'
 fingers: [th, ff, mf, rf, lf]
