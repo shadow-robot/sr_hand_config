@@ -154,7 +154,7 @@ sh_lh_rfj4_position_controller:
 sh_lh_thj1_position_controller:
   joint: lh_THJ1
   pid:
-    d: -310.0
+    d: -300.0
     deadband: 0.0
     friction_deadband: 2000.0
     i: 0.0
