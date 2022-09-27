@@ -34,7 +34,7 @@ class LoadDiagnosticAnalyzer:
             general_info_file = rospkg.RosPack().get_path('sr_hand_config') + \
                 '/' + str(hand_serial) + '/general_info.yaml'
 
-            with open(general_info_file) as gi_file:
+            with open(general_info_file, encoding="utf-8") as gi_file:
                 general_info = yaml.safe_load(gi_file)
 
             self._hand_types[hand_serial] = general_info['type']
@@ -50,7 +50,7 @@ class LoadDiagnosticAnalyzer:
         for hand_serial in self._hand_serials_list:
             analyzer_file_path = self._get_analyzer_file(hand_serial)
 
-            with open(analyzer_file_path) as af_file:
+            with open(analyzer_file_path, encoding="utf-8") as af_file:
                 analyzer = yaml.safe_load(af_file)
 
             self._modify_analyzers_for_correct_index(analyzer, hand_serial)
@@ -81,7 +81,6 @@ class LoadDiagnosticAnalyzer:
             return 'rh'
         return 'lh'
 
-
     def _get_analyzer_file(self, hand_serial):
         if self._hand_types[hand_serial] == 'hand_g':
             analyzer_file_suffix = '_lite'
@@ -97,7 +96,7 @@ class LoadDiagnosticAnalyzer:
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
             '/common/config/common_diagnostic_analyzers.yaml'
 
-        with open(common_analyzers_file_path) as ca_file:
+        with open(common_analyzers_file_path, encoding="utf-8") as ca_file:
             common_analyzers = yaml.safe_load(ca_file)
 
         for analyzer, params in common_analyzers['analyzers'].items():

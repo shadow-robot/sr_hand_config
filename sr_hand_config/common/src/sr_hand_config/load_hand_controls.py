@@ -47,7 +47,7 @@ class LoadHandControls:
         return next(walk(path), (None, None, []))[2]
 
     def _load_params_from_file(self, file_path):  # pylint: disable=R0201
-        with open(file_path) as param_file:
+        with open(file_path, encoding="utf-8") as param_file:
             config = yaml.safe_load(param_file)
         for param in config:
             rospy.set_param(param, config[param])
