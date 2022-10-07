@@ -74,7 +74,8 @@ class LoadDiagnosticAnalyzer:
 
             analyzer['analyzers']['shadow_hand']['analyzers'][individual_analyzer]['regex'] = new_regex
 
-    def _side_to_prefix(self, side):  # pylint: disable=R0201
+    @staticmethod
+    def _side_to_prefix(self, side):
         if side != 'right' or side != 'left':
             raise ValueError("Wrong side provided")
         if side == 'right':

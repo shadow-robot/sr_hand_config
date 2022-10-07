@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from os import walk
+from os import stat, walk
 import yaml
 import rospy
 import rospkg
@@ -43,10 +43,12 @@ class LoadHandControls:
             for control_file_path in common_control_files + mode_control_files:
                 self._load_params_from_file(control_file_path)
 
-    def _get_all_files_in_dir(self, path):  # pylint: disable=R0201
+    @staticmethod
+    def _get_all_files_in_dir(self, path):
         return next(walk(path), (None, None, []))[2]
 
-    def _load_params_from_file(self, file_path):  # pylint: disable=R0201
+    @staticmethod
+    def _load_params_from_file(self, file_path):
         with open(file_path, encoding="utf-8") as param_file:
             config = yaml.safe_load(param_file)
         for param in config:
