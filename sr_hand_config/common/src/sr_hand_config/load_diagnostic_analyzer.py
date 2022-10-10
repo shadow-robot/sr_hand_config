@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2021 Shadow Robot Company Ltd.
+# Copyright 2021-2022 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -14,15 +14,14 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import
 import rospy
 import rospkg
 import yaml
 
 
-class LoadDiagnosticAnalyzer(object):
-    def __init__(self, hand_serials_list):
-        self._hand_serials_list = hand_serials_list
+class LoadDiagnosticAnalyzer:
+    def __init__(self, hs_list):
+        self._hand_serials_list = hs_list
         self._hand_types = {}
         self._hand_sides = {}
         self._diagnostic_analyzers = {}
@@ -35,8 +34,8 @@ class LoadDiagnosticAnalyzer(object):
             general_info_file = rospkg.RosPack().get_path('sr_hand_config') + \
                 '/' + str(hand_serial) + '/general_info.yaml'
 
-            with open(general_info_file) as f:
-                general_info = yaml.safe_load(f)
+            with open(general_info_file, encoding="utf-8") as gi_file:
+                general_info = yaml.safe_load(gi_file)
 
             self._hand_types[hand_serial] = general_info['type']
             self._hand_sides[hand_serial] = general_info['side']
@@ -51,8 +50,8 @@ class LoadDiagnosticAnalyzer(object):
         for hand_serial in self._hand_serials_list:
             analyzer_file_path = self._get_analyzer_file(hand_serial)
 
-            with open(analyzer_file_path) as f:
-                analyzer = yaml.safe_load(f)
+            with open(analyzer_file_path, encoding="utf-8") as af_file:
+                analyzer = yaml.safe_load(af_file)
 
             self._modify_analyzers_for_correct_index(analyzer, hand_serial)
 
@@ -75,13 +74,13 @@ class LoadDiagnosticAnalyzer(object):
 
             analyzer['analyzers']['shadow_hand']['analyzers'][individual_analyzer]['regex'] = new_regex
 
-    def _side_to_prefix(self, side):
+    @staticmethod
+    def _side_to_prefix(side):
+        if side != 'right' or side != 'left':
+            raise ValueError("Wrong side provided")
         if side == 'right':
             return 'rh'
-        elif side == 'left':
-            return 'lh'
-
-        raise ValueError("Wrong side provided")
+        return 'lh'
 
     def _get_analyzer_file(self, hand_serial):
         if self._hand_types[hand_serial] == 'hand_g':
@@ -98,8 +97,8 @@ class LoadDiagnosticAnalyzer(object):
         common_analyzers_file_path = rospkg.RosPack().get_path('sr_hand_config') + \
             '/common/config/common_diagnostic_analyzers.yaml'
 
-        with open(common_analyzers_file_path) as f:
-            common_analyzers = yaml.safe_load(f)
+        with open(common_analyzers_file_path, encoding="utf-8") as ca_file:
+            common_analyzers = yaml.safe_load(ca_file)
 
         for analyzer, params in common_analyzers['analyzers'].items():
             self._diagnostic_analyzers[analyzer] = params
