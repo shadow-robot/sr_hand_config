@@ -76,7 +76,7 @@ class LoadDiagnosticAnalyzer:
 
     @staticmethod
     def _side_to_prefix(side):
-        if side != 'right' or side != 'left':
+        if not side in ('right', 'left'):
             raise ValueError("Wrong side provided")
         if side == 'right':
             return 'rh'
