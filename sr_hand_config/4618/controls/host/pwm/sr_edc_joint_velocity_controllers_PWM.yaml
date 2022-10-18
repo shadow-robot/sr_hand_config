@@ -248,4 +248,3 @@ sh_lh_wrj2_velocity_controller:
     max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
-
