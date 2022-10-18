@@ -12,7 +12,6 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-
 sh_lh_ffj0_mixed_position_velocity_controller:
   joint:  lh_FFJ0
   motor_min_force_threshold: 40
