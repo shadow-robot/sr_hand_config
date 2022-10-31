@@ -1,3 +1,17 @@
+# Copyright 2022 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see <http://www.gnu.org/licenses/>.
+
 sr_calibrations: [
 ["FFJ1", [[3134.0, 0.0], [2341.0, 22.5], [1632.0, 45.0], [931.0, 67.5], [326.0, 90.0]]], 
 ["FFJ2", [[2786.0, 0.0], [2448.0, 22.5], [2071.0, 45.0], [1699.0, 67.5], [1386.0, 90.0]]], 
