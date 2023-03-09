@@ -14,7 +14,7 @@
 
 side: 'right'
 type: 'hand_e'
-version: 'E4M5'
+version: 'E4'
 fingers: [th, ff, mf, rf, lf]
 sensors:
   tip: {th: bt_sp, ff: bt_sp, mf: bt_sp, rf: bt_sp, lf: bt_sp}
