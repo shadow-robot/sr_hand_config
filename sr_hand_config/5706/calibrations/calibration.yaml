@@ -12,7 +12,6 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-
 sr_calibrations: [
 ["FFJ1", [[3309.0, 0.0], [2717.0, 22.5], [2019.0, 45.0], [1340.0, 67.5], [695.0, 90.0]]], 
 ["FFJ2", [[3077.0, 0.0], [2846.0, 22.5], [2450.0, 45.0], [2059.0, 67.5], [1692.0, 90.0]]], 
@@ -65,3 +64,4 @@ sr_calibrations_coupled: [
                     [[1018.0, 1789.0], 90.0, -20.0], 
                     [[1005.0, 1628.0], 90.0, -40.0]]]
 ]
+
