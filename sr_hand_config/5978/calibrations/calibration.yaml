@@ -1,3 +1,18 @@
+
+# Copyright 2023 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see <http://www.gnu.org/licenses/>.
+
 sr_calibrations: [
 ["FFJ1", [[2986.0, 0.0], [2265.0, 22.5], [1493.0, 45.0], [852.0, 67.5], [364.0, 90.0]]], 
 ["FFJ2", [[2991.0, 0.0], [2736.0, 22.5], [2400.0, 45.0], [2033.0, 67.5], [1686.0, 90.0]]], 
@@ -19,7 +34,7 @@ sr_calibrations: [
 ["THJ3", [[2382.0, -15.0], [1752.0, 0.0], [1074.0, 15.0]]], 
 ["THJ4", [[1427.0, 0.0], [1649.0, 22.5], [1923.0, 45.0], [2214.0, 67.5]]], 
 ["THJ5", [[622.0, -60.0], [865.0, -45.0], [1137.0, -30.0], [1466.0, -15.0], [1872.0, 0.0], [2386.0, 15.0], [2689.0, 30.0], [2937.0, 45.0], [3220.0, 60.0]]], 
-["WRJ1", [[2376.0, -45.0], [2297.0, -22.5], [2169.98, 0.0], [2065.0, 15.0], [1969.0, 30.0]]], 
+["WRJ1", [[2376.0, -45.0], [2297.0, -22.5], [2169.98, 0.0], [2065.0, 15.0], [1969.0, 30.0]]],
 ["WRJ2", [[2494.0, -30.0], [949.0, 0.0], [275.0, 10.0]]], 
 ]
 
