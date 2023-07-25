@@ -17,7 +17,7 @@ type: 'hand_e'
 version: 'E4'
 fingers: [th, ff, mf, rf, lf]
 sensors:
-  tip: {th: bt_sp, ff: bt_sp, mf: bt_sp, rf: bt_sp, lf: bt_sp}
+  tip: {th: mst, ff: mst, mf: mst, rf: mst, lf: mst}
   mid: {}
   prox: {}
   palm: {}
