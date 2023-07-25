@@ -12,7 +12,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-sr_lh_tactile_sensor_controller:
+sr_rh_tactile_sensor_controller:
   type: sr_tactile_sensor_controller/SrTactileSensorController
   publish_rate: 100
   prefix: rh
