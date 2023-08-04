@@ -381,14 +381,14 @@ wrj2:
     f: 300
     i: 0
     imax: 0
-    max_pwm: 600
+    max_pwm: 1023
     p: 4500
     sg_left: 0
     sg_right: 0
     sgleftref: 0
     sgrightref: 0
     sign: 0
-    torque_limit: 200
-    torque_limiter_gain: 64
+    torque_limit: 0
+    torque_limiter_gain: 240
   pos_filter:
     tau: 0.05
