@@ -1,4 +1,4 @@
-# Copyright 2023 Shadow Robot Company Ltd.
+# Copyright 2024 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -24,7 +24,6 @@ sh_lh_ffj3_effort_controller:
   max_force: 600
   friction_deadband: 5
 sh_lh_ffj4_effort_controller:
-  type: sr_mechanism_controllers/SrhEffortJointController
   joint: lh_FFJ4
   max_force: 400
   friction_deadband: 5
