@@ -21,7 +21,7 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: EtherCAT Master
         timeout: 5.0
-        regex: 'EtherCAT Master'
+        regex: ['EtherCAT Master', 'EtherCAT Port.*']
         num_items: 1
   control_loop:
     type: diagnostic_aggregator/GenericAnalyzer
