@@ -100,6 +100,8 @@ class LoadDiagnosticAnalyzer:
         with open(common_analyzers_file_path, encoding="utf-8") as ca_file:
             common_analyzers = yaml.safe_load(ca_file)
 
+        common_analyzers['analyzers']['ethercat']['analyzers']['EtherCAT_master']['num_items'] = \
+            len(self._hand_serials_list)
         for analyzer, params in common_analyzers['analyzers'].items():
             self._diagnostic_analyzers[analyzer] = params
 
