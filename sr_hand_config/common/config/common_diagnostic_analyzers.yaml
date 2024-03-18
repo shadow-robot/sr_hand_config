@@ -29,4 +29,3 @@ analyzers:
     timeout: 5.0
     startswith: 'Realtime Control Loop'
     num_items: 1
-    
