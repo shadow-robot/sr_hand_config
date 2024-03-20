@@ -1,4 +1,4 @@
-# Copyright 2022 Shadow Robot Company Ltd.
+# Copyright 2022, 2024 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -21,7 +21,7 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: EtherCAT Master
         timeout: 5.0
-        regex: 'EtherCAT Master'
+        regex: ['EtherCAT Master', 'EtherCAT Port.*']
         num_items: 1
   control_loop:
     type: diagnostic_aggregator/GenericAnalyzer
