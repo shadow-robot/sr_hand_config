@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2021-2022 Shadow Robot Company Ltd.
+# Copyright 2021-2022, 2024 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -100,6 +100,8 @@ class LoadDiagnosticAnalyzer:
         with open(common_analyzers_file_path, encoding="utf-8") as ca_file:
             common_analyzers = yaml.safe_load(ca_file)
 
+        common_analyzers['analyzers']['ethercat']['analyzers']['EtherCAT_master']['num_items'] = \
+            len(self._hand_serials_list)
         for analyzer, params in common_analyzers['analyzers'].items():
             self._diagnostic_analyzers[analyzer] = params
 
