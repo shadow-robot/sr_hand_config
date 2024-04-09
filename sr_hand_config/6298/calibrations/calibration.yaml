@@ -1,9 +1,8 @@
-# Copyright 2023 Shadow Robot Company Ltd.
+# Copyright 2024 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
 # Software Foundation version 2 of the License.
-#
 # This program is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
 # FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
@@ -11,7 +10,7 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
-
+#
 # This file contains an alternate approach to pedal connection, that falls victim to Ubuntu suspending USB devices.
 # Try as I might, I couldn't make Ubuntu leave it alone, so switched to the input events approach seen in
 # sr_triple_pedal.py. I'll leave this here in case it might be useful later.
@@ -32,11 +31,11 @@ sr_calibrations: [
 ["LFJ1", [[2660.0, 0.0], [2018.0, 22.5], [1400.0, 45.0], [870.0, 67.5], [504.0, 90.0]]], 
 ["LFJ2", [[2823.0, 0.0], [2524.0, 22.5], [2147.0, 45.0], [1748.0, 67.5], [1424.0, 90.0]]], 
 ["LFJ3", [[2729.0, -15.0], [2383.0, 0.0], [1890.0, 22.5], [1468.0, 45.0], [1054.0, 67.5], [803.0, 90.0]]], 
-["LFJ4", [[721.0, -20.0], [998.0, -10.0], [1375.0, 0.0], [1691.0, 10.0], [1986.0, 20.0]]], 
+["LFJ4", [[721.0, -20.0], [998.0, -10.0], [1368.0, 0.0], [1691.0, 10.0], [1986.0, 20.0]]], 
 ["LFJ5", [[678.0, 0.0], [1793.0, 22.5], [2646.0, 45.0], [3968.0, 67.5]]], 
 ["THJ3", [[2594.0, -12.0], [2012.0, 0.0], [1479.0, 12.0]]], 
-["THJ4", [[1874.0, 0.0], [2081.0, 22.5], [2315.0, 45.0], [2527.0, 67.5]]], 
-["THJ5", [[941.0, -60.0], [1154.0, -45.0], [1368.0, -30.0], [1599.0, -15.0], [1851.0, 0.0], [2192.0, 15.0], [2488.0, 30.0], [2708.0, 45.0], [2947.0, 60.0]]], 
+["THJ4", [[1874.0, 0.0], [2126.0, 22.5], [2360.0, 45.0], [2572.0, 67.5]]], 
+["THJ5", [[941.0, -60.0], [1154.0, -45.0], [1368.0, -30.0], [1599.0, -15.0], [1891.0, 0.0], [2232.0, 15.0], [2528.0, 30.0], [2748.0, 45.0], [2987.0, 60.0]]], 
 ["WRJ1", [[2282.0, -45.0], [2149.0, -22.5], [2013.0, 0.0], [1898.0, 15.0], [1797.0, 30.0]]], 
 ["WRJ2", [[2408.0, -30.0], [934.97, 0.0], [243.0, 10.0]]], 
 ]
