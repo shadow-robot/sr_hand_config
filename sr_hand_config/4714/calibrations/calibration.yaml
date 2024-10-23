@@ -12,6 +12,20 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
+# Copyright 2024 Shadow Robot Company Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the Free
+# Software Foundation version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program. If not, see <http://www.gnu.org/licenses/>.
+
 sr_calibrations: [
 ["FFJ1", [[3216.0, 0.0], [2499.0, 22.5], [1722.0, 45.0], [992.0, 67.5], [312.0, 90.0]]], 
 ["FFJ2", [[2776.0, 0.0], [2428.0, 22.5], [2054.0, 45.0], [1679.0, 67.5], [1302.0, 90.0]]], 
@@ -30,11 +44,11 @@ sr_calibrations: [
 ["LFJ3", [[1663.0, 0.0], [1967.0, 22.5], [2277.0, 45.0], [2553.0, 67.5], [2767.0, 90.0]]], 
 ["LFJ4", [[2355.0, -20.0], [1998.0, -10.0], [1644.0, 0.0], [1343.0, 10.0], [1119.0, 20.0]]], 
 ["LFJ5", [[1550.0, 0.0], [1997.0, 22.5], [2340.0, 45.0], [2800.0, 67.5]]], 
-["THJ3", [[1078.0, -12.0], [1446.0, 0.0], [1830.0, 12.0]]], 
-["THJ4", [[2689.0, 0.0], [2480.0, 22.5], [2193.0, 45.0], [1875.0, 67.5]]], 
-["THJ5", [[290.0, -60.0], [612.0, -45.0], [910.0, -30.0], [1254.0, -15.0], [1624.0, 0.0], [1995.0, 15.0], [2360.0, 30.0], [2666.0, 45.0], [2953.0, 60.0]]], 
-["WRJ1", [[2379.0, -45.0], [2263.0, -22.5], [2110.0, 0.0], [2002.0, 15.0], [1897.0, 30.0]]], 
-["WRJ2", [[2876.0, -30.0], [1242.0, 0.0], [671.0, 10.0]]], 
+["THJ3", [[1830.0, -12.0], [1446.0, 0.0], [1078.0, 12.0]]], 
+["THJ4", [[2695.0, 0.0], [2473.0, 22.5], [2174.0, 45.0], [1863.0, 67.5]]], 
+["THJ5", [[378.0, -60.0], [581.0, -45.0], [834.0, -30.0], [1139.0, -15.0], [1462.0, 0.0], [1731.0, 15.0], [2093.0, 30.0], [2485.0, 45.0], [2790.0, 60.0]]], 
+["WRJ1", [[2392.0, -45.0], [2280.0, -22.5], [2136.0, 0.0], [2037.0, 15.0], [1927.0, 30.0]]], 
+["WRJ2", [[2851.0, -30.0], [1230.0, 0.0], [522.0, 10.0]]], 
 ]
 
 sr_calibrations_coupled: [
