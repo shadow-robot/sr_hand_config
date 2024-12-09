@@ -14,7 +14,7 @@
 
 side: 'right'
 type: 'hand_g'
-version: 'G1M5'
+version: 'G4'
 fingers: [th, ff, mf, rf]
 sensors:
   tip: {th: mst, ff: mst, mf: mst, rf: mst}
