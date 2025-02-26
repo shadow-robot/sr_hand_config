@@ -14,10 +14,10 @@
 
 side: 'right'
 type: 'hand_g'
-version: 'G1M5'
+version: 'G4'  # It should be changed back to 'G1M5' (old hand palm) until the next hand E software release
 fingers: [th, ff, mf, rf]
 sensors:
-  tip: {th: pst, ff: pst, mf: pst, rf: pst}
+  tip: {th: mst, ff: mst, mf: mst, rf: mst}
   mid: {}
   prox: {}
   palm: {}
