@@ -31,7 +31,7 @@ ffj0:
     torque_limiter_gain: 64
   pos_filter:
     tau: 0.05
-ffj3:s
+ffj3:
   backlash_compensation: true
   pid:
     d: 0
