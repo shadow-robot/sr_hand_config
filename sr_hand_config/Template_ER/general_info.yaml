@@ -14,10 +14,10 @@
 
 side: 'right'
 type: 'hand_e'
-version: 'E3M5'
+version: 'E4'
 fingers: [th, ff, mf, rf, lf]
 sensors:
-  tip: {th: pst, ff: pst, mf: pst, rf: pst, lf: pst}
+  tip: {th: mst, ff: mst, mf: mst, rf: mst, lf: mst}
   mid: {}
   prox: {}
   palm: {}
