@@ -1,4 +1,4 @@
-# Copyright 2024 Shadow Robot Company Ltd.
+# Copyright 2025 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -14,10 +14,10 @@
 
 side: 'right'
 type: 'hand_e'
-version: 'E3M5'
+version: 'E4'
 fingers: [th, ff, mf, rf, lf]
 sensors:
-  tip: {th: pst, ff: pst, mf: pst, rf: pst, lf: pst}
+  tip: {th: mst, ff: mst, mf: mst, rf: mst, lf: mst}
   mid: {}
   prox: {}
   palm: {}
