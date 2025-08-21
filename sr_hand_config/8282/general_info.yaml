@@ -15,9 +15,9 @@
 side: 'right'
 type: 'hand_g'
 version: 'G4'
-fingers: [th, ff, mf, rf]
+fingers: [th, ff, rf]
 sensors:
-  tip: {th: mst, ff: mst, mf: mst, rf: mst}
+  tip: {th: mst, ff: mst, rf: mst}
   mid: {}
   prox: {}
   palm: {}
