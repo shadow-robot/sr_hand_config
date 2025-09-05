@@ -15,14 +15,14 @@
 side: 'left'
 type: 'hand_g'
 version: 'G4'
-fingers: [th, ff, mf, rf]
+fingers: [th, ff, rf]
 sensors:
-  tip: {th: mst, ff: mst, mf: mst, rf: mst}
+  tip: {th: mst, ff: mst, rf: mst}
   mid: {}
   prox: {}
   palm: {}
 mapping_path:
   package_name: sr_edc_launch
-  relative_path: mappings/default_mappings/lh_lite_v1.yaml
+  relative_path: mappings/default_mappings/rh_lite_v1.yaml
 
 
