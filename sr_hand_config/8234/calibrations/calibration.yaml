@@ -12,10 +12,6 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-# This file contains an alternate approach to pedal connection, that falls victim to Ubuntu suspending USB devices.
-# Try as I might, I couldn't make Ubuntu leave it alone, so switched to the input events approach seen in
-# sr_triple_pedal.py. I'll leave this here in case it might be useful later.
-
 sr_calibrations: [
 ["FFJ1", [[3052.0, 0.0], [2498.0, 22.5], [1862.0, 45.0], [1242.0, 67.5], [723.0, 90.0]]], 
 ["FFJ2", [[2992.0, 0.0], [2709.0, 22.5], [2363.0, 45.0], [1943.0, 67.5], [1597.0, 90.0]]], 
