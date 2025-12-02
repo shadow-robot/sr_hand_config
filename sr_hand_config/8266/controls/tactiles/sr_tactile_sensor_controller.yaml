@@ -12,16 +12,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-side: 'right'
-type: 'hand_e'
-version: 'E3M5'
-fingers: [th, ff, mf, rf, lf]
-sensors:
-  tip: {th: mst, ff: mst, mf: mst, rf: mst, lf: mst}
-  mid: {}
-  prox: {}
-  palm: {}
-mapping_path:
-  package_name: sr_edc_launch
-  relative_path: mappings/default_mappings/rh_E_v3.yaml
-
+sr_rh_tactile_sensor_controller:
+  type: sr_tactile_sensor_controller/SrTactileSensorController
+  publish_rate: 100
+  prefix: rh
