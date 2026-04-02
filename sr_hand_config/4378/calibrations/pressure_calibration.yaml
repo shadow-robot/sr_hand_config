@@ -1,4 +1,4 @@
-# Copyright 2025 Shadow Robot Company Ltd.
+# Copyright 2026 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -14,17 +14,17 @@
 
 {'sr_pressure_calibrations': [
 # Each joint has 2 pressure sensors 0 and 1. So we have a row per joint/sensor combination.
-# ["<joint_name>_<sensor>", [[<raw sensor value>, <calibrated millibar pressure>], [<raw sensor value>, <calibrated millibar pressure>]]], 
+# ["<joint_name>_<sensor>", [[<raw sensor value>, <calibrated millibar pressure>], [<raw sensor value>, <calibrated millibar pressure>]]],
 # e.g.
-#["FFJ1_0", [[0.0, 0.0], [1.0, 1.0]]], 
-#["FFJ1_1", [[0.0, 0.0], [1.0, 1.0]]], 
+#["FFJ1_0", [[0.0, 0.0], [1.0, 1.0]]],
+#["FFJ1_1", [[0.0, 0.0], [1.0, 1.0]]],
 #
 # Note the calibrated value should be in millibars as the output in the message is an integer.
 #
 ["FFJ0_0", [[167.0, 0.0], [626.0, 1000.0], [1201.0, 2000.0], [1756.0, 3000.0]]],
 ["FFJ0_1", [[148.0, 0.0], [609.0, 1000.0], [1176.0, 2000.0], [1708.0, 3000.0]]],
-["FFJ1_0", [[0.0, 0.0], [1.0, 1.0]]], 
-["FFJ1_1", [[0.0, 0.0], [1.0, 1.0]]], 
+["FFJ1_0", [[0.0, 0.0], [1.0, 1.0]]],
+["FFJ1_1", [[0.0, 0.0], [1.0, 1.0]]],
 ["FFJ2_0", [[0.0, 0.0], [1.0, 1.0]]],
 ["FFJ2_1", [[0.0, 0.0], [1.0, 1.0]]],
 ["FFJ3_0", [[207.0, 0.0], [668.0, 1000.0], [1240.0, 2000.0], [1800.0, 3000.0]]],

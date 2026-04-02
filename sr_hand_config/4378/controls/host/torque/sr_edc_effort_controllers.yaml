@@ -1,4 +1,4 @@
-# Copyright 2025 Shadow Robot Company Ltd.
+# Copyright 2026 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -128,5 +128,3 @@ sh_rh_wrj2_effort_controller:
   joint: rh_WRJ2
   max_force: 250
   friction_deadband: 5
-
-

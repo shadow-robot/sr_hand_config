@@ -1,4 +1,4 @@
-# Copyright 2025 Shadow Robot Company Ltd.
+# Copyright 2026 Shadow Robot Company Ltd.
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the Free
@@ -248,5 +248,3 @@ sh_rh_wrj2_velocity_controller:
     max_force: 0
     velocity_deadband: 0.015
     friction_deadband: 5
-
-
