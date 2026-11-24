@@ -12,6 +12,10 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
+# This file contains an alternate approach to pedal connection, that falls victim to Ubuntu suspending USB devices.
+# Try as I might, I couldn't make Ubuntu leave it alone, so switched to the input events approach seen in
+# sr_triple_pedal.py. I'll leave this here in case it might be useful later.
+
 sr_calibrations: [
 ["FFJ1", [[3291.0, 0.0], [2774.0, 22.5], [2135.0, 45.0], [1468.0, 67.5], [851.0, 90.0]]], 
 ["FFJ2", [[2883.0, 0.0], [2577.0, 22.5], [2218.0, 45.0], [1810.0, 67.5], [1476.0, 90.0]]], 
@@ -31,8 +35,8 @@ sr_calibrations: [
 ["LFJ4", [[0.0, -20.0], [0.0, -10.0], [0.0, 0.0], [0.0, 10.0], [0.0, 20.0]]], 
 ["LFJ5", [[0.0, 0.0], [0.0, 22.5], [0.0, 45.0], [0.0, 67.5]]], 
 ["THJ3", [[0.0, -12.0], [0.0, 0.0], [0.0, 12.0]]], 
-["THJ4", [[2532.0, 0.0], [2281.0, 22.5], [2007.0, 45.0], [1730.0, 67.5]]], 
-["THJ5", [[770.0, -60.0], [978.0, -45.0], [1214.0, -30.0], [1502.0, -15.0], [1896.0, 0.0], [2322.0, 15.0], [2687.0, 30.0], [2959.0, 45.0], [3210.0, 60.0]]], 
+["THJ4", [[2517.0, 0.0], [2267.0, 22.5], [1987.0, 45.0], [1717.0, 67.5]]], 
+["THJ5", [[829.0, -60.0], [1169.0, -45.0], [1433.0, -30.0], [1847.0, -15.0], [2305.0, 0.0], [2591.0, 15.0], [2835.0, 30.0], [3147.0, 45.0], [3367.0, 60.0]]], 
 ["WRJ1", [[0.0, -45.0], [0.0, -22.5], [0.0, 0.0], [0.0, 15.0], [0.0, 30.0]]], 
 ["WRJ2", [[0.0, -30.0], [0.0, 0.0], [0.0, 10.0]]], 
 ]
